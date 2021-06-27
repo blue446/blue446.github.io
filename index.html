@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.bg {
+  /* The image used */
+  background-image: url("gui2.jpg");
+
+  /* Full height */
+  height: 100%; 
+    
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+</head>
+<body>
+    
+    <script>
+        document.body.addEventListener("wheel", e=>{
+          if(e.ctrlKey)
+            e.preventDefault();//prevent zoom
+        });
+      </script>
+    <script src="myscript.js"></script>
+    
+<div id="bg1" class="bg">
+    
+    <div style="margin-left: 13%;padding-top: 37px" class="buttons">
+        <button class="blob-btn" onclick="start()">
+          RUN
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </button>
+        <script>
+            function start() { pywebview.api.start() }
+        </script>
+        <br/>
+        <div style="margin-left: -11%;padding-top: 5px" class="buttons">
+            <button class="blob-btn">
+              STOP
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </button>
+            <br/>
+
+            <div style="margin-left: -1%;padding-top: 82px" class="buttons">
+              <button class="blob-btn" onclick="ex()">
+                EXIT
+                <span class="blob-btn__inner">
+                  <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                  </span>
+                </span>
+              </button>
+              <script>
+                function ex() { pywebview.api.exi() }
+            </script>
+              <br/>
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+      </div>
+</div></div>
+
+</div>
+</body>
+</html>
