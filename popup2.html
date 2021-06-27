@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  
+}
+h1 {
+  font-family: Tahoma, Arial, sans-serif;
+  color: #191d2b;
+  margin-left: 13.8%;
+  margin-top: 0%;
+}
+p {
+    margin-top:-4%;
+    margin-left: 5%;
+    margin-right:5%;
+    color:rgb(112, 105, 129);
+}
+button{
+    margin-top:-4%;
+    margin-left: 31%;
+    background-color: #0a9bfc;
+    border: 1px;
+    border-color: #0a9bfc;
+    border-style: solid;
+    border-radius: 15px;
+    color: white;
+    padding: 11px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.6s;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: white; 
+    color:#0a9bfc;
+    transition-duration: 0.5s;
+    border: 1px;
+    border-color: #0a9bfc;
+    border-style: solid;
+}
+
+
+.bg {
+  /* The image used */
+
+  /* Full height */
+  height: 100%; 
+    
+  /* Center and scale the image nicely */
+  background-color: ghostwhite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+</head>
+<body>
+<h1 id="header">Visit Layout</h1>
+<p id="text">You may now visit the base layout you want to build on. Ensure it is an empty layout before proceeding.</p>
+<button id="buttonfunc" onclick="submit()">Submit</button>
+<script>
+function start(){
+  pywebview.api.finder();
+}
+</script>
+<script>
+function submit(){
+    pywebview.api.run();    
+
+
+}</script>
+
+
+</body>
+</html>
