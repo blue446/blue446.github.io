@@ -29,8 +29,9 @@ body, html {
 
 .b2 {
 
-  margin-left:-165px;
-  margin-top:-2345px;
+  margin-left:-30px;
+  margin-top:-100%;
+  margin-bottom: 3%;
 }
 </style>
 
@@ -46,7 +47,7 @@ body, html {
 
     
 <div id="bg1" class="bg">
-    
+
     <div style="margin-left: 13%;padding-top: 37px" class="buttons">
         <button class="blob-btn" onclick="start()">
           RUN
@@ -104,13 +105,17 @@ body, html {
           </filter>
         </defs>
       </svg>
-      <img class="b2" src="./settings.png" alt="Settings" width="90" height="90" onclick="rsettings()">
-      <script>
-        function rsettings() { pywebview.api.settings() }
-    </script>
+
       </div>
-</div></div>
+
 </div>
+<img class="b2" src="./settings.png" alt="Settings" width="90" height="90" onclick="rsettings()">
+<script>
+  function rsettings() { pywebview.api.settings() }
+</script>
+</div>
+</div>
+
 
 </body>
 </html>
