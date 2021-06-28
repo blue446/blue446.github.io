@@ -104,8 +104,10 @@ body, html {
           </filter>
         </defs>
       </svg>
-      <img class="b2" src="./settings.png" alt="Settings" width="90" height="90">
-
+      <img class="b2" src="./settings.png" alt="Settings" width="90" height="90" onclick="rsettings()">
+      <script>
+        function rsettings() { pywebview.api.settings() }
+    </script>
       </div>
 </div></div>
 </div>
