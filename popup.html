@@ -74,11 +74,13 @@ button:hover {
 <button id="buttonfunc" onclick="submit()">Submit</button>
 <script>
 function start(){
+  pywebview.api.quit();
   pywebview.api.finder();
 }
 </script>
 <script>
 function submit(){
+  pywebview.api.quit();
     pywebview.api.finder();    
 
 
